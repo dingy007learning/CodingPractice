@@ -1,7 +1,10 @@
 package com.datastructures.java.hashMap;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+
+import com.datastructures.java.hashMap.customHashMap.HashMapCustom;
 
 // Tutorial adapted from JCG, Java Code Geeks
 // http://www.javacodegeeks.com/2014/03/how-hashmap-works-in-java.html
@@ -27,6 +30,21 @@ public class JavaMapStructure {
 		while(mapIterator.hasNext()) {
 			Country country = mapIterator.next();
 			System.out.println("----Capital:"+countryCapitalMap.get(country));
+		}
+		
+		HashMapCustom< String, String> testMap = new HashMapCustom<String, String>();
+		testMap.put("Test1Key", "Test1Value");
+		testMap.put("Test2key", "Test2Value");
+		testMap.display();
+		
+		HashSet<String> set = new HashSet<String>();
+		set.add("String1");
+		set.add("String2");
+		set.add("String1");
+		Iterator<String> setIterator = set.iterator();
+		while(setIterator.hasNext()) {
+			String val = setIterator.next();
+			System.out.println("Set value now : " + val); //Duplicate values have been removed.
 		}
 	}
 

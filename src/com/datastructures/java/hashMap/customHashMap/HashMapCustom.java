@@ -41,17 +41,17 @@ public class HashMapCustom<K, V> {
 
 	public void put(K key, V value) {
 		if(key==null) return;
-		
+
 		int hash = hash(key);
 		Entry<K,V> entry = new Entry<K,V>(key,value,null);
-		
+
 		if(table[hash]==null){
 			table[hash]=entry;
 		}
 		else {
 			Entry<K,V> previous = null;
 			Entry<K,V> current = table[hash];
-			
+
 			while(current!=null){
 				if(current.key.equals(key)){
 					if(previous==null){
@@ -71,7 +71,7 @@ public class HashMapCustom<K, V> {
 			previous.next=entry;
 		}
 	}
-	
+
 	public V get(K key){
 		int hash = hash(key);
 		if(table[hash] == null) {
