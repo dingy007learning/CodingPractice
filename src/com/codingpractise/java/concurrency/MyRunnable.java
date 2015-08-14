@@ -20,7 +20,10 @@ public class MyRunnable implements Runnable {
 //		
 		
 		for (long i = 0; i<100; i++) {
-			System.out.println(Thread.currentThread().getName());	
+			System.out.println(Thread.currentThread().getName());
+			if (Thread.currentThread().isDaemon()) {
+				System.out.println("Daemon thread: " + Thread.currentThread().getName());
+			}
 			System.out.printf(i+", ");
 		}
 	}
