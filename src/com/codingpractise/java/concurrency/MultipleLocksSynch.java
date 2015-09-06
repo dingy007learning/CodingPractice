@@ -89,8 +89,8 @@ public class MultipleLocksSynch {
 		if(!list2.isEmpty()) list2.clear();
 		
 		for (int i = 0; i<1000; i++) {
-			nonSynchStageOne();
-			nonSynchStageTwo();
+			multiLockStageOne();
+			multiLockStageTwo();
 		}
 	}
 	public static void main(String[] args) throws InterruptedException {
@@ -185,7 +185,7 @@ public class MultipleLocksSynch {
 		System.out.println("Time taken for the Multi-Locked Synchronized-Block Processes = " + (end - start));
 		System.out.println("List1 size: " + list1.size());
 		System.out.println("List2 size: " + list2.size());
-		System.out.println("Using Local locks that allows processes to complete in Synchronized manner.");
+		System.out.println("Using Local locks that allows processes to complete in Synchronized manner, with lesser time spent on waiting.");
 	}
 
 }
