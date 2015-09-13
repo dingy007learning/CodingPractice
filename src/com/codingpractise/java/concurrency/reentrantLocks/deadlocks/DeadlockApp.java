@@ -1,6 +1,9 @@
-package com.codingpractise.java.concurrency.reentrantLocks;
+package com.codingpractise.java.concurrency.reentrantLocks.deadlocks;
 
-public class ReentrantMainApp {
+import com.codingpractise.java.concurrency.reentrantLocks.deadlocks.Process;
+
+
+public class DeadlockApp {
 
 	final Process process = new Process();
 	
@@ -32,7 +35,7 @@ public class ReentrantMainApp {
 	}
 	
 	public static void main(String[] args) {
-		ReentrantMainApp app = new ReentrantMainApp();
+		DeadlockApp app = new DeadlockApp();
 		try {
 			app.doWork();
 		} catch (InterruptedException e) {
