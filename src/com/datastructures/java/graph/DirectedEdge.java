@@ -53,11 +53,11 @@ public class DirectedEdge {
 		builder.append("]");
 		return builder.toString();
 	}
-	
+/*	
 	public static void main(String[] args) {
 		DirectedEdge e = new DirectedEdge(12, 23, 4.67);
 		System.out.println(e.toString());
 	}
 	
-	
+*/	
 }
