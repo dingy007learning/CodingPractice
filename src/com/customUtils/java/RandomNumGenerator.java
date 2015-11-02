@@ -1,8 +1,8 @@
-package com.datastructures.java.graph;
+package com.customUtils.java;
 
 import java.util.Random;
 
-public final class RandomUtil {
+public final class RandomNumGenerator {
 
 	private static Random random;
 	private static long seed;
@@ -12,7 +12,7 @@ public final class RandomUtil {
 		random = new Random(seed);
 	}
 	
-	private RandomUtil() {}
+	private RandomNumGenerator() {}
 	
 	public static void setSeed(long s) {
 		seed = s;
