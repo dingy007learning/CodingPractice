@@ -29,6 +29,7 @@ public class Processor {
 			System.out.println("[CONSUMER]Waiting for return Key: ");
 			scn.nextLine();
 			System.out.println("[CONSUMER]Return key pressed.");
+			System.out.println("[CONSUMER]Calling notify(), but the lock on this object has not been released yet.");
 			// Can only be called within a synchronized code block
 			// notifies the code blocks that are waiting (wait()) for the same lock
 			// notifyAll() notifies all threads waiting on the lock
